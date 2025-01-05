@@ -18,21 +18,13 @@ html {
 }
 
 body {
-/* width: 100%; 
+  width: 100%; 
   height: 100vh; 
   background-size: cover; 
   background-position: center; 
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
   opacity: 0; 
-  overflow: hidden; */
-
-  
-  width: 100%;
-  height: 100vh; /* Garantindo que ocupe toda a altura da tela */
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out; /* Suaviza a transição da opacidade */
-  opacity: 0; /* Começa invisível */
+  overflow: hidden; 
 }
 
 header {
