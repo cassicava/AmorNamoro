@@ -32,9 +32,11 @@ atualizarTempo();
 
 // Lista de imagens de fundo
 const imagensDeFundo = [
-  'url("imagens/imagem1.jpg")', // Substitua pelos caminhos reais das suas imagens
-  'url("imagens/imagem2.jpg")',
-  'url("imagens/imagem3.jpg")'
+  'url("i1.jpeg")', 
+  'url("i2.jpeg")',
+  'url("i3.jpeg")', 
+  'url("i4.jpeg")',
+  'url("i5.jpeg")'
 ];
 
 // Função para trocar a imagem de fundo
