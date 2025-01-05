@@ -43,7 +43,7 @@ const imagensDeFundo = [
 let indiceImagem = 0;
 
 function mudarImagemDeFundo() {
-  const backgroundElement = document.querySelector(".background");
+  const backgroundElement = document.querySelector("body");
 
   // Remove a classe 'visible' para fazer a imagem desaparecer
   backgroundElement.classList.remove("visible");
