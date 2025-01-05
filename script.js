@@ -42,7 +42,7 @@ const imagensDeFundo = [
 // Função para trocar a imagem de fundo
 let indiceImagem = 0;
 function mudarImagemDeFundo() {
-  const backgroundElement = document.querySelector(".background");
+  const backgroundElement = document.querySelector("body");
   backgroundElement.style.backgroundImage = imagensDeFundo[indiceImagem];
   indiceImagem = (indiceImagem + 1) % imagensDeFundo.length; // Vai para a próxima imagem e reinicia quando chegar no final
 }
