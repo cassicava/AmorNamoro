@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+
+  <title>O Início da Nossa História</title>
+</head>
+
+
+
+<body>
+
+  <header>
+    <div class="titulo">
+      <h1>Amorzinho</h1>
+      
+      <!-- Contador -->
+      <p id="tempo-namoro"></p>
+      
+    </div>
+  </header>
+
+  <script src="script.js"></script>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="musica/nome-da-musica.mp3" type="audio/mp3">
+    Seu navegador não suporta o áudio.
+  </audio>
+
+
+</body>
+</html>
