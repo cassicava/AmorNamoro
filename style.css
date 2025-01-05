@@ -18,15 +18,10 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100svh;
-  background-image: url(./img/crow.jpg);
-  width: 100vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100vw; /* Largura de 100% da tela */
+  height: 100vh; /* Altura de 100% da tela */
+  background-size: cover; /* Cobrir toda a área */
+  background-position: center; /* Centralizar a imagem */
 }
 
 header {
