@@ -1,5 +1,5 @@
-// Data de início do namoro (substitua pela sua data de pedido de namoro)
-const dataInicio = new Date("2024-12-27T20:30:00"); // Exemplo: 25 de dezembro de 2023, 19:00
+// Data de início do namoro 
+const dataInicio = new Date("2024-12-27T20:30:00"); 
 
 // Função para calcular o tempo de namoro em dias, horas, minutos e segundos
 function calcularTempoDeNamoro() {
@@ -19,7 +19,7 @@ function calcularTempoDeNamoro() {
 function atualizarTempo() {
   document.getElementById(
     "tempo-namoro"
-  ).textContent = `Juntos há ${calcularTempoDeNamoro()}.`;
+  ).textContent = `Juntinhos desde ${calcularTempoDeNamoro()}.`;
 }
 
 // Atualiza o tempo a cada segundo
