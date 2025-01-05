@@ -19,9 +19,12 @@ html {
 
 body {
   width: 100%; 
-  height: 100%; 
+  height: 100vh; 
   background-size: cover; 
   background-position: center; 
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0; /* Começa invisível */
+  overflow: hidden; /* Remove a barra de rolagem */
 }
 
 header {
