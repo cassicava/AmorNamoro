@@ -19,7 +19,7 @@ function calcularTempoDeNamoro() {
 function atualizarTempo() {
   document.getElementById(
     "tempo-namoro"
-  ).textContent = `Juntinhos desde ${calcularTempoDeNamoro()}.`;
+  ).textContent = `Juntinhos ha ${calcularTempoDeNamoro()}.`;
 }
 
 // Atualiza o tempo a cada segundo
