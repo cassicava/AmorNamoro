@@ -45,13 +45,10 @@ let indiceImagem = 0;
 function mudarImagemDeFundo() {
   const backgroundElement = document.querySelector("body");
 
-  // Remove a classe 'visible' para fazer a imagem desaparecer
-  backgroundElement.classList.remove("visible");
-
   // Troca a imagem de fundo
   backgroundElement.style.backgroundImage = imagensDeFundo[indiceImagem];
 
-  // Após um breve atraso, adiciona a classe 'visible' novamente para ativar a transição de opacidade
+  // Adiciona a classe 'visible' para ativar a transição de opacidade
   setTimeout(() => {
     backgroundElement.classList.add("visible");
   }, 100); // Espera um pouco antes de tornar a imagem visível, para o efeito de fade funcionar
