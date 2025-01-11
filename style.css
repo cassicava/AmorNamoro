@@ -1,79 +1,49 @@
-// Data de início do namoro 
-const dataInicio = new Date("2024-12-27T20:30:00"); 
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-// Função para calcular o tempo de namoro em dias, horas, minutos e segundos
-function calcularTempoDeNamoro() {
-  const dataAtual = new Date();
-  const tempo = dataAtual - dataInicio;
-
-  // Convertendo o tempo de milissegundos para unidades maiores
-  const dias = Math.floor(tempo / (1000 * 60 * 60 * 24)); // Total de dias
-  const horas = Math.floor((tempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Horas restantes
-  const minutos = Math.floor((tempo % (1000 * 60 * 60)) / (1000 * 60)); // Minutos restantes
-  const segundos = Math.floor((tempo % (1000 * 60)) / 1000); // Segundos restantes
-
-  return `${dias} dias, ${horas}h, ${minutos}m e ${segundos}s`;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-// Exibindo o tempo de namoro no HTML
-function atualizarTempo() {
-  document.getElementById(
-    "tempo-namoro"
-  ).textContent = `Juntinhos há ${calcularTempoDeNamoro()}.`;
+html {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
-// Atualiza o tempo a cada segundo
-setInterval(atualizarTempo, 1000);
-
-// Chama a função inicialmente para garantir que o tempo seja exibido logo que a página for carregada
-atualizarTempo();
-
-//================================================================
-
-// Lista de imagens de fundo
-const imagensDeFundo = [
-  'url("i1.jpeg")', 
-  'url("i2.jpeg")',
-  'url("i3.jpeg")', 
-  'url("i4.jpeg")',
-  'url("i5.jpeg")'
-];
-
-// Função para trocar a imagem de fundo
-let indiceImagem = 0;
-
-function mudarImagemDeFundo() {
-  const backgroundElement = document.querySelector("body");
-
-  // Remove a classe 'visible' para fazer a imagem desaparecer
-  backgroundElement.classList.remove("visible");
-
-  // Troca a imagem de fundo
-  backgroundElement.style.backgroundImage = imagensDeFundo[indiceImagem];
-
-  // Após um breve atraso, adiciona a classe 'visible' novamente para ativar a transição de opacidade
-  setTimeout(() => {
-    backgroundElement.classList.add("visible");
-  }, 100); // Espera um pouco antes de tornar a imagem visível, para o efeito de fade funcionar
-
-  indiceImagem = (indiceImagem + 1) % imagensDeFundo.length; // Vai para a próxima imagem
+body {
+  width: 100%;
+  height: 100vh;
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
 }
 
-// Chama a função de mudança de imagem a cada 5 segundos (5000ms)
-setInterval(mudarImagemDeFundo, 5000);
+/* Manter o estilo do header como estava */
+header {
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 10px 10px;
+  color: #f2f2f2;
+  text-align: center;
+  background: rgba(71, 71, 71, 0.15);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+}
 
-// Inicializa a primeira imagem
-mudarImagemDeFundo();
+audio {
+  display: none; /* Esconde a tag de áudio */
+}
 
-//===============================================
-
-// Controla o áudio
-const audio = document.querySelector("audio"); // Seleciona a tag de áudio
-audio.volume = 0.5; // Define o volume para 50% (ajuste conforme necessário)
-
-// Ajusta a opacidade do body para visibilidade após o carregamento completo
-window.onload = () => {
-  document.body.style.opacity = 1;
-};
+/* Classe para transição da opacidade */
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
 
 
