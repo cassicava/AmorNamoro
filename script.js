@@ -45,13 +45,16 @@ let indiceImagem = 0;
 function mudarImagemDeFundo() {
   const backgroundElement = document.querySelector("body");
 
+  // Antes de trocar a imagem, remove a classe 'visible' para dar a transição suave
+  backgroundElement.classList.remove("visible");
+
   // Troca a imagem de fundo
   backgroundElement.style.backgroundImage = imagensDeFundo[indiceImagem];
 
-  // Adiciona a classe 'visible' para ativar a transição de opacidade
+  // Aplica a classe 'visible' para mostrar a nova imagem com transição
   setTimeout(() => {
     backgroundElement.classList.add("visible");
-  }, 100); // Espera um pouco antes de tornar a imagem visível, para o efeito de fade funcionar
+  }, 100); // Espera um pouco antes de adicionar a classe para garantir o efeito de fade
 
   indiceImagem = (indiceImagem + 1) % imagensDeFundo.length; // Vai para a próxima imagem
 }
@@ -68,7 +71,8 @@ mudarImagemDeFundo();
 const audio = document.querySelector("audio"); // Seleciona a tag de áudio
 audio.volume = 0.5; // Define o volume para 50% (ajuste conforme necessário)
 
-// Ajusta a opacidade do body para visibilidade após o carregamento completo
+// Toca o áudio assim que a página for carregada (acredito que o autoplay esteja bloqueado, então fazemos manualmente)
 window.onload = () => {
   document.body.style.opacity = 1;
+  audio.play(); // Toca o áudio ao carregar a página
 };
