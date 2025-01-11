@@ -19,7 +19,7 @@ function calcularTempoDeNamoro() {
 function atualizarTempo() {
   document.getElementById(
     "tempo-namoro"
-  ).textContent = `Juntinhos ha ${calcularTempoDeNamoro()}.`;
+  ).textContent = `Juntinhos há ${calcularTempoDeNamoro()}.`;
 }
 
 // Atualiza o tempo a cada segundo
@@ -67,5 +67,11 @@ mudarImagemDeFundo();
 
 //===============================================
 
+// Controla o áudio
 const audio = document.querySelector("audio"); // Seleciona a tag de áudio
-audio.volume = 0.5; // Define o volume para 50% (ajuste conforme desejar)
+audio.volume = 0.5; // Define o volume para 50% (ajuste conforme necessário)
+
+// Ajusta a opacidade do body para visibilidade após o carregamento completo
+window.onload = () => {
+  document.body.style.opacity = 1;
+};
