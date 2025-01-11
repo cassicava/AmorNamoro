@@ -7,24 +7,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Helvetica, Arial, sans-serif;
-
-  /* border: 1px solid red; */
 }
 
 html {
   scroll-behavior: smooth;
-
   height: -webkit-fill-available;
 }
 
 body {
-  width: 100%; 
-  height: 100vh; 
-  background-size: cover; 
-  background-position: center; 
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
-  opacity: 0; 
-  overflow: hidden; 
+  opacity: 0;
+  overflow: hidden;
 }
 
 header {
@@ -41,3 +38,10 @@ header {
 audio {
   display: none; /* Esconde a tag de áudio */
 }
+
+/* Classe para transição da opacidade */
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
